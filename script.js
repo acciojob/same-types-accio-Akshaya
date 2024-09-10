@@ -1,12 +1,14 @@
 function isSameType(value1, value2) {
-    if (isNaN(value1) || isNaN(value2)) {
-        return false;
+    if (isNaN(value1) && isNaN(value2)) {
+        return true;
     }
 
     return typeof value1 === typeof value2;
 }
 
-console.log(isSameType(NaN, 123));
+console.log(isSameType("hello", "world"));  
+
+console.log(isSameType(NaN, NaN)); 
 
 // do not change the code below.
 let value1 = prompt("Enter Start of the Range.");
